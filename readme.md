@@ -1,3 +1,9 @@
+## Quick Start
+
+### `cd ./app`
+### `npm install && npm start`
+___
+
 Create a one page application following the LO-FIs given in this assignment.
 
 We suggest to use create-react-app typescript for your setup.

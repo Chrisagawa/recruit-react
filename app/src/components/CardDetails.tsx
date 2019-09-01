@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import * as moment from 'moment'
 
 import * as Styled from './cardDetails.styled';
@@ -8,12 +8,12 @@ import {
   submitButtonLabel,
 } from './constants';
 
-type onChangeCardNoProps = {
+interface OnChangeCardNoProps {
   e: React.ChangeEvent<HTMLInputElement>,
   setState: React.Dispatch<React.SetStateAction<number | undefined>>
-};
+}
 
-const onChangeNumber = (props: onChangeCardNoProps): void => {
+const onChangeNumber = (props: OnChangeCardNoProps): void => {
   const { e, setState } = props;
   const { value } = e.target;
   if (numbersOnlyRegex) setState(parseInt(value))
@@ -71,4 +71,4 @@ export default () => {
       </Styled.Submit>
     </Styled.Container>
   )
-}
+};
